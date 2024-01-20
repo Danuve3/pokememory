@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-full">
 
 <head>
   <meta charset="UTF-8">
@@ -8,10 +8,14 @@
   <title>Document</title>
   <link rel="stylesheet" href="./index.css">
   <script type="module" src="./index.js"></script>
+  <script type="module" src="./components/GridPokemon.js"></script>
+  <script type="module" src="./components/CardPokemon.js"></script>
 </head>
 
-<body>
-
+<body class="h-full p-5 bg-gradient-to-t from-violet-300 to-violet-400">
+  <div class="container max-w-screen-xl m-auto">
+    <grid-pokemon></grid-pokemon>
+  </div>
 </body>
 
 </html>

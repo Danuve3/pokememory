@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .card{
+        @apply bg-transparent size-[70px] rounded-md;
+        perspective: 1000px;
+    }
+
+    .card-content{
+        @apply relative size-full items-center justify-center transition-transform duration-300 shadow-md rounded-md;
+        transform-style: preserve-3d;
+    }
+
+    .card.selected .card-content{
+        transform: rotateY(180deg);
+    }
+
+    .front,
+    .back{
+        @apply absolute size-full rounded-md;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .front{
+        @apply pattern-rhombus pattern-indigo-500 pattern-bg-white pattern-size-4 pattern-opacity-100 border-4 border-slate-100;
+    }
+
+    .back{
+        @apply bg-white flex border-4 border-slate-300/80;
+        transform: rotateY(180deg);
+    }
+
+	.back img{
+        @apply size-full drop-shadow-md;
+	}
+}
