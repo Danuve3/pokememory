@@ -16,7 +16,7 @@ class GridPokemon extends HTMLElement {
         try {
             const pokemons = await this.fetchData();
             const shuffledPokemons = this.shuffleArray(pokemons);
-            const selectedPokemons = shuffledPokemons.slice(0, 14).concat(shuffledPokemons.slice(0, 14));
+            const selectedPokemons = shuffledPokemons.slice(0, 16).concat(shuffledPokemons.slice(0, 16));
             const finalShuffledPokemons = this.shuffleArray(selectedPokemons);
             this.render(finalShuffledPokemons);
         } catch (error) {
@@ -65,7 +65,6 @@ class GridPokemon extends HTMLElement {
 
     checkForMatch() {
         const isMatch = this.firstCard.dataset.key === this.secondCard.dataset.key;
-
         isMatch ? this.disableCards() : this.unflipCards();
     }
 
