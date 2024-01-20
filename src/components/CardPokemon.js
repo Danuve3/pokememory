@@ -33,13 +33,6 @@ class CardPokemon extends HTMLElement {
                 </div>
             </div>
         `;
-
-        const cardElement = this.querySelector('.card');
-        cardElement.addEventListener('click', () => this.handleCardClick());
-    }
-
-    handleCardClick() {
-        this.querySelector('.card').classList.add('selected');
     }
 }
 
