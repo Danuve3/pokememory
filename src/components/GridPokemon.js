@@ -27,7 +27,7 @@ class GridPokemon extends HTMLElement {
     }
 
     async fetchData() {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=151");
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=251");
         const data = await response.json();
         return data.results.map((pokemon, index) => ({...pokemon, isFlipped: false, finalIndex: index + 1}));
     }
