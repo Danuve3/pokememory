@@ -1,3 +1,5 @@
+import lottie from 'lottie-web';
+
 class GridPokemon extends HTMLElement {
     constructor() {
         super();
@@ -71,8 +73,25 @@ class GridPokemon extends HTMLElement {
     disableCards() {
         this.firstCard.removeEventListener('click', this.flipCard);
         this.secondCard.removeEventListener('click', this.flipCard);
-
+        
+        const dataKeyFirstCard = this.firstCard.dataset.key;
+        const dataKeySecondCard = this.secondCard.dataset.key;
+        this.playLottieAnimation(dataKeyFirstCard,dataKeySecondCard);
         this.resetBoard();
+    }
+
+    playLottieAnimation(firstCardAnimation,secondCardAnimation) {
+        const animationPath = './assets/animations/match.json';
+
+        document.querySelectorAll(`.card[data-key="${firstCardAnimation}"] .lottie-animation`).forEach(lottieContainer => {
+            lottie.loadAnimation({
+                container: lottieContainer,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: './assets/animations/match.json',
+            });
+        });
     }
 
     unflipCards() {

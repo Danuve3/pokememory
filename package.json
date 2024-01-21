@@ -24,6 +24,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "lottie-web": "^5.12.2",
     "tailwindcss-animated": "^1.0.1"
   }
 }

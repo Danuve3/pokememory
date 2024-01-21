@@ -25,6 +25,7 @@ class CardPokemon extends HTMLElement {
                 data-pokemon="${name}"
                 data-key="${key}"
             >
+                <div class="lottie-animation"></div>
                 <div class="card-content">
                     <div class="front"></div>
                     <div class="back">
