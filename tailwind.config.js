@@ -21,7 +21,10 @@ export default {
 					transform: 'translateX(0rem)',
 				  },
 				},
-			  },
+			},
+			backgroundImage: {
+				'pokeballs': 'url("./bg-pokeballs.jpg")',
+			},
 		},
 		patterns: {
 			opacities: {
