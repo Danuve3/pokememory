@@ -89,7 +89,7 @@ class GridPokemon extends HTMLElement {
                 renderer: 'svg',
                 loop: false,
                 autoplay: true,
-                path: './assets/animations/match.json',
+                path: './animations/match.json',
             });
         });
     }
