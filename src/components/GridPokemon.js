@@ -18,7 +18,7 @@ class GridPokemon extends HTMLElement {
         try {
             const pokemons = await this.fetchData();
             const shuffledPokemons = this.shuffleArray(pokemons);
-            const selectedPokemons = shuffledPokemons.slice(0, 16).concat(shuffledPokemons.slice(0, 16));
+            const selectedPokemons = shuffledPokemons.slice(0, 18).concat(shuffledPokemons.slice(0, 18));
             const finalShuffledPokemons = this.shuffleArray(selectedPokemons);
             this.render(finalShuffledPokemons);
         } catch (error) {
