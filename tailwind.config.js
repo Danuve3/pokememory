@@ -5,6 +5,24 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+		extend: {
+			keyframes: {
+				shake: {
+				  '0%': {
+					transform: 'translateX(0rem)',
+				  },
+				  '25%': {
+					transform: 'translateX(-0.25rem)',
+				  },
+				  '75%': {
+					transform: 'translateX(0.25rem)',
+				  },
+				  '100%': {
+					transform: 'translateX(0rem)',
+				  },
+				},
+			  },
+		},
 		patterns: {
 			opacities: {
 				100: "1",
@@ -28,8 +46,9 @@ export default {
 			}
 		}
 	},
-  plugins: [
+  	plugins: [
 		require('tailwindcss-bg-patterns'),
+		require('tailwindcss-animated'),
 	],
 }
 

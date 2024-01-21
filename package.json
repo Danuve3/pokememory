@@ -22,5 +22,8 @@
     "vite": "^5.0.8"
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss-animated": "^1.0.1"
+  }
 }
