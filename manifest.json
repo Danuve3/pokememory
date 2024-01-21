@@ -2,14 +2,15 @@
     "name": "PokeMemory",
     "short_name": "PokeMemory",
     "description": "Pokemon memory game by Danuve",
-    "start_url": "/",
-    "display": "standalone",
+    "scope": "/pokememory/",
+    "start_url": "/pokememory/",
+    "display": "fullscreen",
     "background_color": "#ffffff",
     "theme_color": "#000000",
     "orientation": "portrait",
     "icons": [
       {
-        "src": "./src/assets/icon.webp",
+        "src": "./icon.webp",
         "sizes": "192x192",
         "type": "image/webp"
       }
