@@ -79,8 +79,13 @@ class GridPokemon extends HTMLElement {
         this.lockBoard = true;
 
         setTimeout(() => {
-            this.firstCard.classList.remove('selected');
-            this.secondCard.classList.remove('selected');
+            this.firstCard.classList.add('animate-shake', 'animate-twice');
+            this.secondCard.classList.add('animate-shake', 'animate-twice');
+        }, 300);
+
+        setTimeout(() => {
+            this.firstCard.classList.remove('selected', 'animate-shake', 'animate-twice');
+            this.secondCard.classList.remove('selected', 'animate-shake', 'animate-twice');
 
             this.resetBoard();
         }, 1000);

@@ -21,7 +21,7 @@ class CardPokemon extends HTMLElement {
     render(name, imageUrl, key) {
         this.innerHTML = `
             <div
-                class="card"
+                class="card animate-duration-200 animate-ease-in"
                 data-pokemon="${name}"
                 data-key="${key}"
             >
